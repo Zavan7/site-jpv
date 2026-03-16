@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="pt-br">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>JPV</title>
+
+  <link rel="stylesheet" href="{% static 'home_jpv/css/style.css' %}" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">Igreja Evangélica Pentecostal Jesus o Pão da Vida</div>
+
+    <nav class="menu">
+      <a href="#">Sobre</a>
+      <a href="#">Eventos</a>
+      <a href="#">EBD</a>
+      <a href="#">Ministérios</a>
+      <a href="#">Fotos</a>
+      <a href="#">Contato</a>
+
+      <a class="btn-login" href="#">Login</a>
+
+      <!-- BOTÃO DARK MODE -->
+      <button id="theme-toggle" class="btn-theme">🌙</button>
+    </nav>
+  </header>
+
+  <section class="hero fade">
+    <div class="hero-content">
+      <h1>Bem-vindo à nossa casa</h1>
+
+      <p>Um lugar para crescer na fé e viver a Palavra de Deus.</p>
+
+      <div class="hero-buttons">
+        <a class="btn-primary" href="#">Mensagem da Semana</a>
+        <a class="btn-secondary" href="#">Ver Agenda</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="versiculo fade">
+    <p class="versiculo-text">
+      "Porque Deus amou o mundo de tal maneira que deu o seu Filho
+      unigênito..."
+    </p>
+
+    <span class="versiculo-ref"> João 3:16 </span>
+  </section>
+
+  <section class="section fade">
+    <h2>Mensagem da Semana</h2>
+
+    <div class="mensagem-card">
+      <h3>Andando pela fé</h3>
+
+      <p>Uma reflexão sobre confiar em Deus mesmo em tempos difíceis.</p>
+
+      <a class="btn-primary">Ler mensagem</a>
+    </div>
+  </section>
+
+  <section class="section eventos fade">
+    <h2>Agenda da Igreja</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Culto de Ensino</h3>
+        <p>Terça - 20:00</p>
+      </div>
+
+      <div class="card">
+        <h3>EBD</h3>
+        <p>Domingo - 09:00</p>
+      </div>
+
+      <div class="card">
+        <h3>Culto da Família</h3>
+        <p>Domingo - 19:00</p>
+      </div>
+
+      <div class="card">
+        <h3>Culto de Jovens</h3>
+        <p>Sábado - 20:00</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ministerios fade">
+    <h2>Ministérios</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Jovens</h3>
+        <p>Comunhão e crescimento espiritual.</p>
+      </div>
+
+      <div class="card">
+        <h3>Louvor</h3>
+        <p>Adoração através da música.</p>
+      </div>
+
+      <div class="card">
+        <h3>Círculo de oração</h3>
+        <p>Oração e Adoração.</p>
+      </div>
+
+      <div class="card">
+        <h3>Voluntários</h3>
+        <p>Amor no servir.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ebd fade">
+    <h2>Escola Bíblica Dominical</h2>
+
+    <p>
+      Estudo da Bíblia dividido por classes para aprofundamento da Palavra.
+    </p>
+
+    <a class="btn-primary">Ver classes</a>
+  </section>
+
+  <section class="section galeria fade">
+    <h2>Momentos da Igreja</h2>
+
+    <div class="galeria-grid">
+      <img src="{% static 'home_jpv/img/img1.jpg' %}" />
+      <img src="{% static 'home_jpv/img/img2.jpg' %}" />
+      <img src="{% static 'home_jpv/img/img3.jpg' %}" />
+      <img src="{% static 'home_jpv/img/img4.jpg' %}" />
+      <img src="{% static 'home_jpv/img/img5.jpg' %}" />
+      <img src="{% static 'home_jpv/img/img6.jpg' %}" />
+    </div>
+  </section>
+
+  <section class="section oracao fade">
+    <h2>Pedidos de Oração</h2>
+
+    <p>Se você precisa de oração, envie seu pedido.</p>
+
+    <form class="form-oracao">
+      <input type="text" placeholder="Seu nome" />
+
+      <textarea placeholder="Pedido de oração"></textarea>
+
+      <button class="btn-primary">Enviar</button>
+    </form>
+  </section>
+
+  <section class="section localizacao fade">
+    <h2>Onde estamos</h2>
+
+    <div class="mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1597.098543341205!2d-49.11155573933302!3d-22.33761599264798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bf67e5086856bd%3A0xff150dd53388cf69!2sIEP.%20Jesus%20o%20p%C3%A3o%20da%20vida!5e0!3m2!1spt-BR!2sbr!4v1773633493696!5m2!1spt-BR!2sbr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <section class="newsletter fade">
+    <h2>Receba nossas mensagens</h2>
+
+    <p>Inscreva-se para receber conteúdos da igreja.</p>
+
+    <div class="newsletter-form">
+      <input type="email" placeholder="Seu email" />
+
+      <button class="btn-primary">Inscrever</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>Igreja Comunidade</h3>
+        <p>Uma igreja centrada na Palavra e no amor de Cristo.</p>
+      </div>
+
+      <div>
+        <h4>Links</h4>
+
+        <ul>
+          <li>Sobre</li>
+          <li>Eventos</li>
+          <li>Mensagem</li>
+          <li>Fotos</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contato</h4>
+
+        <p>contato@igreja.com</p>
+        <p>(14) 99999-9999</p>
+      </div>
+    </div>
+
+    <p class="copyright">© 2026 Igreja Comunidade</p>
+  </footer>
+
+  <script src="{% static 'home_jpv/js/script.js' %}"></script>
+</body>
+
+</html>

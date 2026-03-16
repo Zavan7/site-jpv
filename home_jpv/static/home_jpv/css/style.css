@@ -1,0 +1,621 @@
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= VARIÁVEIS ================= */
+
+:root {
+
+    --primary: #2f6df6;
+    --primary-dark: #1e4ed8;
+
+    --bg: #f8fafc;
+    --section: #ffffff;
+
+    --text: #1f2937;
+    --text-light: #6b7280;
+
+    --border: #e5e7eb;
+
+    --radius: 12px;
+
+    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+    --transition: .35s;
+
+}
+
+/* ================= DARK MODE ================= */
+
+body.dark {
+
+    --bg: #0f172a;
+    --section: #1e293b;
+
+    --text: #f1f5f9;
+    --text-light: #94a3b8;
+
+    --border: #334155;
+
+    --shadow-soft: 0 4px 14px rgba(0, 0, 0, 0.5);
+    --shadow-card: 0 15px 40px rgba(0, 0, 0, 0.6);
+
+}
+
+/* ================= BASE ================= */
+
+body {
+
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+    background: var(--bg);
+    color: var(--text);
+
+    line-height: 1.6;
+
+    transition: background .4s, color .4s;
+
+}
+
+h1,
+h2,
+h3 {
+
+    font-weight: 600;
+    letter-spacing: -.5px;
+
+}
+
+/* ================= HEADER ================= */
+
+.header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 10%;
+
+    background: var(--section);
+
+    box-shadow: var(--shadow-soft);
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    backdrop-filter: blur(10px);
+
+}
+
+.logo {
+
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.menu {
+
+    display: flex;
+    gap: 22px;
+    align-items: center;
+
+}
+
+.menu a {
+
+    text-decoration: none;
+    color: var(--text);
+
+    font-weight: 500;
+
+    position: relative;
+
+    transition: var(--transition);
+
+}
+
+.menu a::after {
+
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--primary);
+
+    transition: var(--transition);
+
+}
+
+.menu a:hover::after {
+
+    width: 100%;
+
+}
+
+.btn-login {
+
+    padding: 8px 16px;
+
+    border-radius: 8px;
+
+    border: 1px solid var(--primary);
+
+    color: var(--primary);
+
+    transition: var(--transition);
+
+}
+
+.btn-login:hover {
+
+    background: var(--primary);
+    color: white;
+
+}
+
+/* ================= BOTÃO TEMA ================= */
+
+.btn-theme {
+
+    border: none;
+    background: var(--section);
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    padding: 6px 10px;
+
+    border-radius: 8px;
+
+    box-shadow: var(--shadow-soft);
+
+}
+
+/* ================= HERO ================= */
+
+.hero {
+
+    min-height: 70vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: linear-gradient(135deg, #2f6df6, #4f8df7);
+
+    color: white;
+
+    padding: 20px;
+
+    position: relative;
+    overflow: hidden;
+
+}
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border-radius: 50%;
+
+    top: -200px;
+    right: -200px;
+
+}
+
+.hero h1 {
+
+    font-size: 46px;
+    margin-bottom: 16px;
+
+}
+
+.hero p {
+
+    font-size: 18px;
+    margin-bottom: 30px;
+
+}
+
+/* ================= BOTÕES ================= */
+
+.btn-primary {
+
+    display: inline-block;
+
+    background: var(--primary);
+    color: white;
+
+    padding: 12px 26px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: 500;
+
+    transition: var(--transition);
+
+}
+
+.btn-primary:hover {
+
+    transform: translateY(-3px);
+    background: var(--primary-dark);
+
+    box-shadow: var(--shadow-soft);
+
+}
+
+.btn-secondary {
+
+    display: inline-block;
+
+    padding: 12px 26px;
+
+    border-radius: 8px;
+
+    border: 1px solid white;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+}
+
+.btn-secondary:hover {
+
+    background: white;
+    color: var(--primary);
+
+}
+
+/* ================= SEÇÕES ================= */
+
+.section {
+
+    padding: 90px 10%;
+    text-align: center;
+
+}
+
+.section h2 {
+
+    font-size: 32px;
+    margin-bottom: 40px;
+
+}
+
+/* ================= VERSICULO ================= */
+
+.versiculo {
+
+    background: linear-gradient(135deg, #eef4ff, #f8fbff);
+
+    padding: 80px 20px;
+
+}
+
+body.dark .versiculo {
+
+    background: #1e293b;
+
+}
+
+.versiculo-text {
+
+    font-size: 24px;
+    font-style: italic;
+
+    max-width: 700px;
+    margin: auto;
+
+}
+
+.versiculo-ref {
+
+    display: block;
+    margin-top: 12px;
+
+    font-weight: 600;
+    color: var(--primary);
+
+}
+
+/* ================= CARDS ================= */
+
+.card,
+.mensagem-card {
+
+    background: var(--section);
+
+    padding: 30px;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-soft);
+
+    transition: var(--transition);
+
+}
+
+.card:hover,
+.mensagem-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-card);
+
+}
+
+/* ================= GRID ================= */
+
+.grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 30px;
+
+}
+
+/* ================= GALERIA ================= */
+
+.galeria-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 14px;
+
+}
+
+.galeria-grid img {
+
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    transition: .4s;
+
+}
+
+.galeria-grid img:hover {
+
+    transform: scale(1.08);
+
+}
+
+/* ================= FORM ================= */
+
+.form-oracao {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+
+    max-width: 500px;
+    margin: auto;
+
+}
+
+.form-oracao input,
+.form-oracao textarea {
+
+    padding: 14px;
+
+    border-radius: 8px;
+
+    border: 1px solid var(--border);
+
+    font-size: 15px;
+
+    background: var(--section);
+
+    color: var(--text);
+
+    transition: .2s;
+
+}
+
+.form-oracao textarea {
+
+    min-height: 120px;
+
+}
+
+.form-oracao input:focus,
+.form-oracao textarea:focus {
+
+    outline: none;
+
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 2px rgba(47, 109, 246, .2);
+
+}
+
+/* ================= NEWSLETTER ================= */
+
+.newsletter {
+
+    background: linear-gradient(135deg, #f2f6ff, #f7faff);
+
+    padding: 90px 20px;
+
+}
+
+body.dark .newsletter {
+
+    background: #1e293b;
+
+}
+
+.newsletter-form {
+
+    display: flex;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+.newsletter-form input {
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    border: 1px solid var(--border);
+
+    width: 260px;
+
+}
+
+/* ================= MAPA ================= */
+
+.mapa {
+
+    max-width: 900px;
+    margin: auto;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow-soft);
+
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    background: #020617;
+    color: white;
+
+}
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 40px;
+
+    padding: 70px 10%;
+
+}
+
+footer ul {
+
+    list-style: none;
+
+}
+
+footer li {
+
+    margin: 6px 0;
+
+    opacity: .8;
+
+    cursor: pointer;
+
+}
+
+footer li:hover {
+
+    opacity: 1;
+
+}
+
+.copyright {
+
+    text-align: center;
+
+    padding: 20px;
+
+    background: #020617;
+
+    font-size: 14px;
+
+    color: #94a3b8;
+
+}
+
+/* ================= ANIMAÇÃO SCROLL ================= */
+
+.fade {
+
+    opacity: 0;
+    transform: translateY(40px);
+
+    transition: all .8s ease;
+
+}
+
+.fade.show {
+
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media(max-width:768px) {
+
+    .hero h1 {
+
+        font-size: 32px;
+
+    }
+
+    .section {
+
+        padding: 70px 6%;
+
+    }
+
+    .menu {
+
+        gap: 14px;
+        font-size: 14px;
+
+    }
+
+}
